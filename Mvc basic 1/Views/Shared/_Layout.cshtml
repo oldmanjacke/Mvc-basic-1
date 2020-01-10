@@ -6,8 +6,18 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-
+    
     <nav>
+        <ul>
+            <li>
+                <a href="@Url.Action("Index", "Home")">Index</a>
+            </li>
+            <li>
+                <a asp-action="Contact" asp-controller="Home">Contact</a>
+            </li>
+            <li>
+                <a asp-action="Privacy" asp-controller="Home">Privacy</a>
+        </ul>
 
     </nav>
 
