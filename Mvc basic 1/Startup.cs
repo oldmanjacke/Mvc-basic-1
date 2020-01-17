@@ -32,6 +32,13 @@ namespace Mvc_basic_1
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapControllerRoute(
+                    name: "Febercheck",
+                    pattern:"FeberCheck",
+                    defaults: new { Controller = "Feber",Action = "Index"}
+                    );
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
