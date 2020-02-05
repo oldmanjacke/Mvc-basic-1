@@ -1,7 +1,9 @@
-﻿body {
-    background-color:green;
+﻿.body {
+    background-color:forestgreen;
+    /*margin:4px;*/
 }
 
 h1 {
     color:blue;
+    background-color:black;
 }

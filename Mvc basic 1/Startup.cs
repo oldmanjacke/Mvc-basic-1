@@ -27,6 +27,7 @@ namespace Mvc_basic_1
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -35,8 +36,8 @@ namespace Mvc_basic_1
 
                 endpoints.MapControllerRoute(
                     name: "Febercheck",
-                    pattern:"FeberCheck",
-                    defaults: new { Controller = "Feber",Action = "Index"}
+                    pattern: "FeberCheck",
+                    defaults: new { Controller = "Feber", Action = "Index" }
                     );
 
                 endpoints.MapControllerRoute(
