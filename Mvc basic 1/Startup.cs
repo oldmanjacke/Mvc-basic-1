@@ -29,6 +29,8 @@ namespace Mvc_basic_1
             }
             app.UseStaticFiles();
 
+            app.UseSession();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -39,6 +41,12 @@ namespace Mvc_basic_1
                     pattern: "FeberCheck",
                     defaults: new { Controller = "Feber", Action = "Index" }
                     );
+
+                endpoints.MapControllerRoute(
+                    name: "GuessingGame",
+                    pattern:"GuessingGame",
+                    defaults: new { Controller = "Guessing", Action ="Index"}
+                     );
 
                 endpoints.MapControllerRoute(
                     name: "default",
