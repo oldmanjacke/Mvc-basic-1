@@ -15,7 +15,11 @@ else
     <h3>Session is empty</h3>
 }
 
-<form id="form">
+<form  asp-action="Index" asp-controller="Guessing" method="post">
+    <input type="text" name="myGuess" value="" placeholder="Type a guess" />
 
+   <span>@ViewBag.Msg</span>
+
+    <input type="submit" value="Save" />
 
 </form>

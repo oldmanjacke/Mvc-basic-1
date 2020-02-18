@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "LookAt";
+}
+
+<h1>LookAt</h1>
+
+@if (ViewBag.Msg != null)
+{
+    <h3>@ViewBag.Msg</h3>
+}
+else
+{
+    <h3>Session is emtpty</h3>
+}
+
+<form asp-action="SaveSession" method="post">
+    <input type="text"  name="message" value=""/>
+
+    <input type="submit" name="Save in Session" />
+
+</form>
