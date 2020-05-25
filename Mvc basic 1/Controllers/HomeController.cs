@@ -25,5 +25,10 @@ namespace Mvc_basic_1.Controllers
         {
             return View();
         }
+
+        public IActionResult Test()
+        {
+            return View();
+        }
     }
 }

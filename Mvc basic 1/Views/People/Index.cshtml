@@ -1,0 +1,55 @@
+﻿    @Model IEnumerable<MVC_bacis_1.Models.Person>
+    @{
+        ViewData["Title"] = " People Index";
+    }
+
+    @*<h1>Index</h1>*@
+
+
+    <h1>CRUD Persons</h1>
+
+    <p>@ViewBag.msg</p>
+
+    <a onclick="getPartialLink(event)" data-target="modifyPerson" asp-action="PeopleCreatePartial" asp-controller="People">Partial Create People</a>
+    <a onclick="getPartialLink(event)" data-target="modifyPerson" asp-action="PeopleFilterPartial" asp-controller="People">Partial Filter People</a>
+    <br />
+
+    <a asp-action="Create">Create People</a>
+    <a asp-action="Filter">Filter People</a>
+    <hr />
+
+    <div>
+
+        <div id="targetPartial">
+
+        </div>
+
+        <div id="targetPartial2">
+
+        </div>
+    </div>
+
+    <table>
+
+        <tr>
+            <td font-weight: bold; font-size: large;>Name:</td>
+            <td> &nbsp;&nbsp;</td>
+            <td>Country:</td>
+            <td>&nbsp;&nbsp;</td>
+            <td> </td>
+        </tr>
+
+        @foreach (People aPeople in Model)
+        {
+            <partial name="_AddToList" model="aPeople" />
+        }
+
+    </table>
+
+    <div id="addToList"></div>
+    <br />
+    <hr />
+    <div id="modifyPeople">
+        <br />
+        <hr />
+    </div>

@@ -1,0 +1,15 @@
+﻿@model PeopleService
+@{
+    ViewData["Title"] = "Filter";
+}
+
+<h1>Filter</h1>
+
+<form method="post">
+
+    <label asp-for="filterInput"></label>
+    <input asp-for="filterInput" /><span asp-validation-for="filterInput"></span>
+
+    <input type="submit" value="Search for Name or Country" />
+
+</form>
