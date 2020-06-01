@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Filter";
+}
+
+<h1>Filter Persons</h1>
+
+<form method="post" onsubmit="postLink(event)" data-target="addToList" asp-controller="Persons" asp-action="PersonFilterPartial" asp-route-id="">
+
+
+    <input type="text" name="filterInput" />
+    <input type="submit" value="Search for Name or Country" />
+
+
+</form>

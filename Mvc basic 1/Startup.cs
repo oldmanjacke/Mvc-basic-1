@@ -60,6 +60,12 @@ namespace Mvc_basic_1
                      );
 
                 endpoints.MapControllerRoute(
+                   name: "People",
+                   pattern: "People",
+                   defaults: new { Controller = "People", Action = "Index" }
+                    );
+
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
 

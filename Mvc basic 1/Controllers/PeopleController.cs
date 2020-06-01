@@ -93,10 +93,10 @@ namespace Mvc_basic_1.Controllers
         public IActionResult PeopleRenamePartial(int id)
         {
 
-            return PartialView("_PersonRenamePartial", _peopleService.Find(id));
+            return PartialView("_PeopleRenamePartial", _peopleService.Find(id));
         }
         [HttpPost]
-        public IActionResult PersonRenamePartial(PeopleViewModel peopleViewModel, int id)
+        public IActionResult PeopleRenamePartial(PeopleViewModel peopleViewModel, int id)
         {
             if (ModelState.IsValid)
             {
